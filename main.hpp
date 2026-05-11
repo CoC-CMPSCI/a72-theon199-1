@@ -18,7 +18,11 @@ void equalfold(int[], int[], int);
 
 void swapfold(int number[], int last)
 {
-    // TODO: reverse the array in place — swap element i with element last-i-1
+    for (int i = 0; i < last / 2; i++) {
+        int temp = number[i];
+        number[i] = number[last - i - 1];
+        number[last - i - 1] = temp;
+    }
 }
 
 void sumfold(int number[], int last)
